@@ -21,6 +21,10 @@ const temp = document.createElement( 'div' );
 temp.innerHTML = `<style>
 
 .info {
+
+	position: fixed;
+	left: 10%;
+	top: 20%;
 	padding: 5px;
 	background: rgba(0, 0, 0, 0.8);
 	border: 6px solid rgba(0, 0, 0, 0.2);
@@ -48,8 +52,8 @@ temp.innerHTML = `<style>
 
 .msg {
 	position: absolute;
-	left: 10px;
-	bottom: 10px;
+	top : 10%;
+	left: 10%;
 	color: #fff;
 	background: rgba(0, 0, 0, 0.6);
 	font-weight: bolder;
@@ -72,12 +76,15 @@ temp.innerHTML = `<style>
 </style>
 <div class="msg" style="display: none;"></div>
 <div class="info">
-	<big>== Aimbot & ESP ==</big>
+	<big>자동수강신청</big>
 	<br>
-	<button class="btn" type="button">Add to favorites</button>
+	<button class="btn" type="button">신청하기1</button>
+	<br>
+	<button class="btn" type="button">신청하기2</button>
+	<br>
+	<button class="btn" type="button">신청하기3</button>
     <h3>BACKSTAB</h3>
-    해킹 연구회에 참여하세요 -> {나중에 모집링크 넣을것}
-
+    해킹 연구회에 참여하세요
 </div>`;
 
 
@@ -92,14 +99,3 @@ window.addEventListener( 'DOMContentLoaded', async function () {
 
 	}
 } );
-
-function updatePopupPosition() {
-	// Calculate the new position of the popup based on the scroll position
-	var scrollX = window.scrollX || window.pageXOffset;
-	var scrollY = window.scrollY || window.pageYOffset;
-	infoEl.style.right = (20 - scrollX) + 'px';
-	infoEl.style.bottom = (20 - scrollY) + 'px';
-}
-
-updatePopupPosition();
-window.addEventListener('scroll', updatePopupPosition);
